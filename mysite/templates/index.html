@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>port folio</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>NTK</span></a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">services</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+<!-- login form container  -->
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form  method = 'POST' action="/home/" >
+        {% csrf_token %}
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="enter your email" name = "email">
+        <input type="password" class="box" placeholder="enter your password" name = "password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="/contact/">register now</a></p>
+    </form>
+
+</div>
+
+<!-- home section starts  -->
+
+
+
+<!-- home section ends -->
+
+
+
+<!-- contact section starts  -->
+<{% spaceless %}
+
+
+
+
+
+<h1>
+
+<div> 
+
+    
+</div>
+
+
+
+</h1>
+
+
+
+
+{% endspaceless %}
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="/static/contact-img.svg" alt="">
+        </div>
+
+        <form    method = 'POST'   action="/contact/">
+         {% csrf_token %}
+            <div class="inputBox">
+                <input type="text" placeholder="name" name='name'>
+                <input type="email" placeholder="email" name='email'>
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="number" name='phone'>
+                <input type="text" placeholder="subject" name = 'subject'>
+            </div>
+            <textarea placeholder="message" name="message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+<!-- brand section  -->
+<section class="brand-container">
+
+    <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/static/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/6.jpg" alt=""></div>
+        </div>
+    </div>
+
+</section>
+<section class="footer">
+    <h1 class="credit"> created by <span> mr. parashuram T kalakutagi </span> | all rights reserved! </h1>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>
